@@ -91,7 +91,6 @@ body {
 .nav-links {
   display: flex;
   align-items: center;
-
   gap: 25px;
 
   list-style: none;
@@ -122,6 +121,19 @@ body {
   border: none;
 
   cursor: pointer;
+
+  width: 24px;
+  height: 24px;
+
+  align-items: center;
+  justify-content: center;
+
+  font-size: 28px;
+  font-weight: 300;
+
+  color: var(--text-color);
+
+  line-height: 1;
 }
 
 .menu-toggle img {
@@ -141,22 +153,25 @@ body.dark-theme .menu-toggle img {
 /* THEME TOGGLE */
 
 .theme-toggle {
+  background-color: transparent;
+
+  border: none;
+
   width: 42px;
   height: 42px;
 
   border-radius: 50%;
 
-  border: none;
-
-  background: transparent;
-
   cursor: pointer;
 
   font-size: 18px;
 
+  color: var(--text-color);
+
   transition:
     background-color 0.2s ease,
-    transform 0.2s ease;
+    transform 0.2s ease,
+    border-color 0.2s ease;
 }
 
 .theme-toggle:hover {
@@ -406,13 +421,17 @@ body.dark-theme .menu-toggle img {
 @media (max-width: 768px) {
 
   .menu-toggle {
-    display: block;
+    display: flex;
+  }
+
+  .nav-right {
+    position: relative;
   }
 
   .nav-links {
     position: absolute;
 
-    top: 60px;
+    top: 55px;
     right: 0;
 
     width: 220px;
@@ -429,13 +448,37 @@ body.dark-theme .menu-toggle img {
 
     display: none;
     flex-direction: column;
+    align-items: flex-start;
 
-    gap: 18px;
+    gap: 5px;
   }
 
   .nav-links.active {
     display: flex;
   }
+
+  .nav-links li {
+    width: 100%;
+  }
+
+  .nav-links a {
+    display: block;
+
+    width: 100%;
+
+    padding: 12px 14px;
+
+    border-radius: 10px;
+
+    transition:
+      background-color 0.2s ease,
+      opacity 0.2s ease;
+  }
+
+  .nav-links a:hover {
+  background-color: rgba(127, 127, 127, 0.12);
+  opacity: 1;
+ }
 
   .hero {
     padding: 70px 0;
@@ -488,3 +531,7 @@ body.dark-theme .menu-toggle img {
     font-size: 24px;
   }
 }
+
+
+
+

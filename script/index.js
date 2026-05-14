@@ -29,3 +29,30 @@ themeToggle.addEventListener('click', () => {
   }
 
 });
+
+
+
+const menuToggle = document.querySelector('.js-menu-toggle');
+
+const navLinks = document.querySelector('.nav-links');
+
+
+menuToggle.addEventListener('click', () => {
+
+  navLinks.classList.toggle('active');
+
+  const isOpen = navLinks.classList.contains('active');
+
+
+  if (isOpen) {
+
+    menuToggle.innerHTML = '✕';
+
+  } else {
+
+    menuToggle.innerHTML = `
+      <img src="images/Icons/hamburger-menu.png" alt="">
+    `;
+  }
+
+});
