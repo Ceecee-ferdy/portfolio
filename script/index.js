@@ -80,7 +80,6 @@ navItems.forEach((link) => {
 
 const sections = document.querySelectorAll('section');
 
-
 window.addEventListener('scroll', () => {
 
   let currentSection = '';
@@ -99,6 +98,14 @@ window.addEventListener('scroll', () => {
     }
 
   });
+
+  // FIX FOR CONTACT SECTION AT PAGE BOTTOM
+  if (
+    window.innerHeight + window.scrollY >=
+    document.body.offsetHeight - 50
+  ) {
+    currentSection = 'contact';
+  }
 
   navItems.forEach((link) => {
 

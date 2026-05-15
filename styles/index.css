@@ -59,8 +59,25 @@ body {
 /* HEADER */
 
 .header {
+  position: sticky;
+
+  top: 0;
+
   width: 100%;
+
   border-bottom: 1px solid var(--border-color);
+
+  background-color: rgba(255, 255, 255, 0.7);
+
+  backdrop-filter: blur(14px);
+
+  -webkit-backdrop-filter: blur(14px);
+
+  z-index: 1000;
+}
+
+body.dark-theme .header {
+  background-color: rgba(15, 15, 15, 0.7);
 }
 
 .navbar {
@@ -70,6 +87,8 @@ body {
 
   padding-top: 24px;
   padding-bottom: 24px;
+
+  transition: padding 0.3s ease;
 }
 
 .logo {
