@@ -7,6 +7,8 @@ const savedTheme = localStorage.getItem('theme');
 if (savedTheme === 'dark') {
   document.body.classList.add('dark-theme');
   themeToggle.innerHTML = '☀️';
+} else {
+  themeToggle.innerHTML = '🌙';
 }
 
 
@@ -54,5 +56,24 @@ menuToggle.addEventListener('click', () => {
       <img src="images/Icons/hamburger-menu.png" alt="">
     `;
   }
+
+});
+
+const navItems = document.querySelectorAll('.nav-links a');
+
+
+navItems.forEach((link) => {
+
+  link.addEventListener('click', () => {
+
+
+      navLinks.classList.remove('active');
+
+
+    menuToggle.innerHTML = `
+      <img src="images/Icons/hamburger-menu.png" alt="">
+    `;
+    
+  });
 
 });
