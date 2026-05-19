@@ -8,7 +8,7 @@ This portfolio showcases my projects, frontend skills and development journey wh
 
 ## 🚀 Live Demo
 
-🔗 https://your-vercel-link.vercel.app
+🔗 https://ceecee-portfolio.vercel.app/
 
 ---
 
