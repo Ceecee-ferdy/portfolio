@@ -1,3 +1,5 @@
+window.fadeReady = true;
+
 const themeToggle = document.querySelector('.js-theme-toggle');
 
 
@@ -17,10 +19,8 @@ themeToggle.addEventListener('click', () => {
 
   document.body.classList.toggle('dark-theme');
 
-  
   const isDarkTheme = document.body.classList.contains('dark-theme');
 
-  
   if (isDarkTheme) {
     themeToggle.innerHTML = '☀️';
     localStorage.setItem('theme', 'dark');
@@ -45,7 +45,6 @@ menuToggle.addEventListener('click', () => {
 
   const isOpen = navLinks.classList.contains('active');
 
-
   if (isOpen) {
 
     menuToggle.innerHTML = '✕';
@@ -66,14 +65,12 @@ navItems.forEach((link) => {
 
   link.addEventListener('click', () => {
 
-
-      navLinks.classList.remove('active');
-
+    navLinks.classList.remove('active');
 
     menuToggle.innerHTML = `
       <img src="images/Icons/hamburger-menu.png" alt="">
     `;
-    
+
   });
 
 });
@@ -137,7 +134,7 @@ const observer = new IntersectionObserver((entries) => {
   });
 
 }, {
- threshold: 0.25
+  threshold: 0.25
 });
 
 fadeElements.forEach((element) => {
